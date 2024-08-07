@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomía Fascinante</title>
+    <link href="https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'American Typewriter', serif;
+            font-size: 16px;
+            color: #f5f5f5;
+            background-color: #000;
+            background-image: url('https://www.publicdomainpictures.net/pictures/320000/velka/space-background-1579701669ZK1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(0, 0, 50, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #f5f5f5;
+        }
+        h1 {
+            font-family: 'Impact', sans-serif;
+            margin: 0;
+            font-size: 36px;
+            color: #f5f5f5;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tab {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: rgba(0, 0, 50, 0.8);
+            border: 2px solid #f5f5f5;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #ffd700;
+            font-size: 18px;
+        }
+        .tab.active {
+            background: #ffd700;
+            color: #000;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background: rgba(0, 0, 50, 0.8);
+            border-radius: 10px;
+            border: 2px solid #f5f5f5;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+            text-align: center;
+        }
+        .content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+        }
+        .content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 50, 0.8);
+            border-top: 2px solid #f5f5f5;
+            color: #f5f5f5;
+        }
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container-overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+        }
+        .notification-box {
+            background: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .rating-form {
+            background: #444;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .star {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ffd700;
+            margin: 0 5px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: 'American Typewriter', serif;
+        }
+        .btn {
+            background: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'American Typewriter', serif;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Astronomía Fascinante</h1>
+        <nav>
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="register.html">Registrarse</a>
+        </nav>
+    </header>
+    <div class="tabs">
+        <div class="tab active" onclick="showContent('tab1')">El Sistema Solar</div>
+        <div class="tab" onclick="showContent('tab2')">Las Galaxias</div>
+        <div class="tab" onclick="showContent('tab3')">Agujeros Negros</div>
+    </div>
+    <section id="tab1" class="content active">
+        <h2>El Sistema Solar</h2>
+        <p>El Sistema Solar está compuesto por el Sol y todos los objetos que lo orbitan, incluyendo planetas, lunas, asteroides, cometas y meteoroides. El Sol contiene el 99.86% de la masa del Sistema Solar, con Júpiter y Saturno conteniendo la mayor parte del resto.</p>
+        <img src="https://img.freepik.com/free-vector/solar-system-science-education_1308-89626.jpg?w=200" alt="Sistema Solar">
+    </section>
+    <section id="tab2" class="content">
+        <h2>Las Galaxias</h2>
+        <p>Una galaxia es un conjunto masivo de estrellas, sistemas estelares, cúmulos estelares, gas, polvo y materia oscura gravitacionalmente unidos. Las galaxias contienen miles de millones de estrellas y se agrupan en cúmulos y supercúmulos.</p>
+        <img src="https://th.bing.com/th/id/OIP.3PbMEqymCtmQtmfKYLvEtgHaFj?rs=1&pid=ImgDetMain" alt="Galaxia">
+    </section>
+    <section id="tab3" class="content">
+        <h2>Agujeros Negros</h2>
+        <p>Un agujero negro es una región del espacio donde la gravedad es tan fuerte que nada, ni siquiera la luz, puede escapar de él. Los agujeros negros se forman cuando estrellas masivas colapsan al final de su ciclo de vida.</p>
+        <img src="https://www.fayerwayer.com/resizer/SQ1AjbjH92A6hac3pHEHb7LI5Z8=/1600x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/D4TK5SST4VB7NFQKVXOMTHAGUE.JPG" alt="Agujero Negro">
+    </section>
+    <form id="surveyForm" class="rating-form">
+        <label for="experience">¿Cómo calificarías tu experiencia?</label>
+        <select id="experience" name="experience" class="input-field">
+            <option value="excelente">Excelente</option>
+            <option value="buena">Buena</option>
+            <option value="regular">Regular</option>
+            <option value="mala">Mala</option>
+        </select>
+        
+        <label for="feedback">Comentarios:</label>
+        <textarea id="feedback" name="feedback" class="input-field"></textarea>
+        
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+    
+    <footer>
+        <p>&copy; 2024 Astronomía Fascinante. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:info@astronomiafascinante.com">info@astronomiafascinante.com</a></p>
+    </footer>
+    
+    <script>
+        function showContent(tabId) {
+            const contents = document.querySelectorAll('.content');
+            const tabs = document.querySelectorAll('.tab');
+            
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.tab[onclick="showContent('${tabId}')"]`).classList.add('active');
+        }
+
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const experience = document.getElementById('experience').value;
+            const feedback = document.getElementById('feedback').value;
+
+            if (!feedback.trim()) {
+                alert('Por favor, deja un comentario.');
+                return;
+            }
+
+            alert(`Gracias por tu feedback! \nExperiencia: ${experience}\nComentarios: ${feedback}`);
+            document.getElementById('surveyForm').reset();
+        });
+    </script>
+</body>
+</html>
